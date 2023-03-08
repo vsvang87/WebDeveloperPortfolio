@@ -1,0 +1,31 @@
+$primaryColor: rgb(42, 196, 4);
+$secondaryColor: rgb(255, 140, 8);
+$fontColor: rgb(255, 255, 255);
+$darkGray: rgb(117, 117, 117);
+
+.about-container {
+    height: 100vh;
+    display: flex;
+    .about-col {
+        width: 50%;
+    }
+    .about-left{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .about-wrapper{
+            padding: 0 5rem;
+            .about-image{
+                position: relative;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    inset: 0;
+                    background: $darkGray;
+                    z-index: -1;
+                    border-radius: 50px;
+                }
+            }
+        }
+    }
+}

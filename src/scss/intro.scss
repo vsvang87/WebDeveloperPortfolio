@@ -1,0 +1,75 @@
+$primaryColor: rgb(42, 196, 4);
+$secondaryColor: rgb(255, 140, 8);
+$fontColor: rgb(255, 255, 255);
+$darkGray: rgb(117, 117, 117);
+
+
+.intro-container {
+    display: flex;
+    height: 100vh;
+    .intro-col {
+        width: 50%;
+    }
+    .intro-left {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .intro-left-wrapper{
+            padding: 0 5rem;
+            .intro-title {
+                margin: 0;
+            }
+            .intro-name {
+                font-weight: 650;
+                font-size: 3.5rem;
+                margin: 1rem 0;
+            }
+            .intro-description {
+                p {
+                    margin: 1rem 0 2rem 0;
+                    color: $darkGray;
+                }
+               }
+            .intro-job {
+                h3 {
+                    color: $primaryColor;
+                    margin: 0;
+                }
+            }
+            .intro-button {
+                margin-top: 0.5rem;
+                a {
+                    text-decoration: none;
+                    margin-right: 1rem;
+                    background: $secondaryColor;
+                    padding: 0.8rem 1.3rem;
+                    color: $fontColor;
+                    transition: 0.2s ease-in-out;
+                    &:hover {
+                        background: $primaryColor;
+                    }
+                }
+            }
+        }
+      
+    }
+    .intro-right {
+        flex: 1;
+        position: relative;
+        &::after {
+            content: '';
+            clip-path: polygon(100% 0%, 100% 51%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+            position: absolute;
+            background: $primaryColor;
+            top: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+        }
+    }
+   
+}
+
+
